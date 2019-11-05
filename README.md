@@ -65,6 +65,7 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 
 > Remember to convert your contact title to all upper case for case insenstive comparing so upper(contact_title)
 
+     SELECT * FROM customers WHERE UPPER(contact_title) LIKE '%MARKET%'
 
 ### add a customer record for   
 * customer id is 'SHIRE'
