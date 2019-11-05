@@ -77,6 +77,7 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 * the country is 'Middle Earth'
 > This can be done with the INSERT INTO clause
 
+     INSERT INTO customers(customer_id, company_name, contact_name, address, city, postal_code, country) VALUES ('SHIRE', 'The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', '111', 'Middle Earth')
 
 ### update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
 > This can be done with UPDATE and WHERE clauses
