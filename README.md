@@ -36,27 +36,32 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 ### find all customers that live in London. Returns 6 records.
 > This can be done with SELECT and WHERE clauses
 
-     SELECT * FROM customers WHERE city = 'London'
+     SELECT * FROM customers 
+     WHERE city = 'London'
 
 ### find all customers with postal code 1010. Returns 3 customers.
 > This can be done with SELECT and WHERE clauses
 
-     SELECT * FROM customers WHERE postal_code = '1010'
+     SELECT * FROM customers 
+     WHERE postal_code = '1010'
 
 ### find the phone number for the supplier with the id 11. Should be (010) 9984510.
 > This can be done with SELECT and WHERE clauses
 
-     SELECT * FROM suppliers WHERE supplier_id = '11'
+     SELECT * FROM suppliers 
+     WHERE supplier_id = '11'
 
 ### list orders descending by the order date. The order with date 1998-05-06 should be at the top.
 > This can be done with SELECT, WHERE, and ORDER BY clauses
 
-     SELECT * FROM orders ORDER BY order_date DESC
+     SELECT * FROM orders 
+     ORDER BY order_date DESC
 
 ### find all suppliers who have names longer than 20 characters. You can use `length(company_name)` to get the length of the name. Returns 11 records.
 > This can be done with SELECT and WHERE clauses
 
-     SELECT * FROM suppliers WHERE LENGTH(company_name) > 20
+     SELECT * FROM suppliers 
+     WHERE LENGTH(company_name) > 20
 
 ### find all customers that include the word 'MARKET' in the contact title. Should return 19 records.
 > This can be done with SELECT and a WHERE clause using the LIKE keyword
@@ -65,7 +70,8 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 
 > Remember to convert your contact title to all upper case for case insenstive comparing so upper(contact_title)
 
-     SELECT * FROM customers WHERE UPPER(contact_title) LIKE '%MARKET%'
+     SELECT * FROM customers 
+     WHERE UPPER(contact_title) LIKE '%MARKET%'
 
 ### add a customer record for   
 * customer id is 'SHIRE'
@@ -83,7 +89,9 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 ### update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
 > This can be done with UPDATE and WHERE clauses
 
-     UPDATE customers SET postal_code = '11122' WHERE contact_name = 'Bilbo Baggins'
+     UPDATE customers 
+     SET postal_code = '11122' 
+     WHERE contact_name = 'Bilbo Baggins'
 
 ### list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 18 orders.
 > This can be done with SELECT, COUNT, JOIN and GROUP BY clauses. Your count should focus on a field in the Orders table, not the Customer table
@@ -108,6 +116,11 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 ### list orders grouped by customer's city showing number of orders per city. Returns 69 Records with _Aachen_ showing 6 orders and _Albuquerque_ showing 18 orders.
 > This is very similar to the previous two queries, however, it focuses on the City rather than the CustomerName
 
+     SELECT c.city, COUNT(o.customer_id) AS order_count
+     FROM orders o JOIN customers c
+     ON o.customer_id = c.customer_id
+     GROUP BY c.city
+     ORDER BY city
 
 ## Data Normalization
 
