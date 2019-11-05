@@ -51,6 +51,7 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 ### list orders descending by the order date. The order with date 1998-05-06 should be at the top.
 > This can be done with SELECT, WHERE, and ORDER BY clauses
 
+     SELECT * FROM orders ORDER BY order_date DESC
 
 ### find all suppliers who have names longer than 20 characters. You can use `length(company_name)` to get the length of the name. Returns 11 records.
 > This can be done with SELECT and WHERE clauses
