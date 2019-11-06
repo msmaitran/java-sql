@@ -134,7 +134,7 @@ Take the following data and normalize it into a 3NF database.  You can use the w
 | Bob         | Joe      | Horse    |            |            |            |            | No          | No           |
 | Sam         | Ginger   | Dog      | Miss Kitty | Cat        | Bubble     | Fish       | Yes         | No           |
 
-/* person */
+**person**
 
 | owner_id | owner_name  | fenced_yard | city_dweller |
 |----------|-------------|-------------|--------------|
@@ -142,7 +142,7 @@ Take the following data and normalize it into a 3NF database.  You can use the w
 | 2        | Bob         | No          | No           |
 | 3        | Sam         | Yes         | No           |
 
-# pet_types
+**pet_types**
 
 | pet_id | pet_type | 
 |--------|----------|
@@ -152,7 +152,7 @@ Take the following data and normalize it into a 3NF database.  You can use the w
 | 4      | Turtle   |
 | 5      | Fish     |
 
-# pets
+**pets**
 
 | owner_id   | pet_name   | pet_type |
 |------------|------------|----------|
