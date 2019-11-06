@@ -134,7 +134,7 @@ Take the following data and normalize it into a 3NF database.  You can use the w
 | Bob         | Joe      | Horse    |            |            |            |            | No          | No           |
 | Sam         | Ginger   | Dog      | Miss Kitty | Cat        | Bubble     | Fish       | Yes         | No           |
 
-# person
+/* person */
 
 | owner_id | owner_name  | fenced_yard | city_dweller |
 |----------|-------------|-------------|--------------|
